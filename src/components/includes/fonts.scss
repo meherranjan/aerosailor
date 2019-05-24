@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'zero-black';
+    src: url('../../../static/fonts/gbl.eot');
+    src: url('../../../static/fonts/gbl.eot?#iefix') format('embedded-opentype'),
+         url('../../../static/fonts/gbl.woff2') format('woff2'),
+         url('../../../static/fonts/gbl.woff') format('woff'),
+         url('../../../static/fonts/gbl.ttf') format('truetype'),
+         url('../../../static/fonts/gbl.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zero-bold';
+    src: url('../../../static/fonts/gbo.eot');
+    src: url('../../../static/fonts/gbo.eot?#iefix') format('embedded-opentype'),
+         url('../../../static/fonts/gbo.woff2') format('woff2'),
+         url('../../../static/fonts/gbo.woff') format('woff'),
+         url('../../../static/fonts/gbo.ttf') format('truetype'),
+         url('../../../static/fonts/gbo.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zero-medium';
+    src: url('../../../static/fonts/gme.eot');
+    src: url('../../../static/fonts/gme.eot?#iefix') format('embedded-opentype'),
+         url('../../../static/fonts/gme.woff2') format('woff2'),
+         url('../../../static/fonts/gme.woff') format('woff'),
+         url('../../../static/fonts/gme.ttf') format('truetype'),
+         url('../../../static/fonts/gme.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zero-book';
+    src: url('../../../static/fonts/gboo.eot');
+    src: url('../../../static/fonts/gboo.eot?#iefix') format('embedded-opentype'),
+         url('../../../static/fonts/gboo.woff2') format('woff2'),
+         url('../../../static/fonts/gboo.woff') format('woff'),
+         url('../../../static/fonts/gboo.ttf') format('truetype'),
+         url('../../../static/fonts/gboo.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'zero-regular';
+    src: url('../../../static/fonts/gre.eot');
+    src: url('../../../static/fonts/gre.eot?#iefix') format('embedded-opentype'),
+         url('../../../static/fonts/gre.woff2') format('woff2'),
+         url('../../../static/fonts/gre.woff') format('woff'),
+         url('../../../static/fonts/gre.ttf') format('truetype'),
+         url('../../../static/fonts/gre.svg#geomanistregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Roboto Mono";
+    src:url("../../../static/fonts/rm.woff2") format("woff2"),
+      url("../../../static/fonts/rm.woff") format("woff"),
+      url("../../../static/fonts/rm.ttf") format("opentype");
+    font-style:normal;font-weight:400;
+}

@@ -1,0 +1,113 @@
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin animation-fill-mode($str) {
+	-webkit-animation-fill-mode: $str;
+	animation-fill-mode: $str;
+}
+@mixin animation-delay($str) {
+	-webkit-animation-delay: $str;
+	animation-delay: $str;
+}
+@mixin animation($name) {
+	-webkit-animation: $name;
+	-moz-animation: $name;
+	-ms-animation: $name;
+	animation: $name;
+}
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@mixin clip-path($string) {
+	-webkit-clip-path: $string;
+	clip-path: $string;
+}
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+.hover-saber a{
+	position: relative;
+	color: transparent !important;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+
+	&:after, &:before {
+		content: attr(data-cont);
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		@include transform(scale(1));
+		@include transition(1s all);
+	}
+	&:after {
+		color: white;
+		@include clip-path(polygon(100% 100%, 100% 0, -35% 0, 0 100%));
+		@include animation(volta .5s);
+	}
+	&:before {
+		color: white;
+		@include clip-path(polygon(0 100%, -35% 0, 0 0, 0 100%));
+		@include transform(scale(1.025));
+	}
+	&:hover:after {
+		@include animation(hideum .4s);
+		@include animation-fill-mode(forwards);
+	}
+	&:hover:before {
+		@include transform( scale(1.05));
+		@include animation(showum .4s);
+		@include animation-fill-mode(forwards);
+		@include animation-delay(.3s);
+	}
+}
+@include keyframes(hideum) {
+	0% {
+		@include clip-path(polygon(100% 100%, 100% 0, -35% 0, 0 100%));
+	}
+	100% {
+		@include clip-path(polygon(100% 100%, 100% 0, 100% 0, 135% 100%));
+	}
+}
+@include keyframes(showum) {
+	0% {
+		@include clip-path(polygon(0 100%, -35% 0, 0 0, 0 100%));
+	}
+	100% {
+		@include clip-path(polygon(135% 100%, 100% 0, 0 0, 0 100%));
+	}
+}
+@include keyframes(volta) {
+	0% {
+		@include transform( scale(1.05));
+	}
+	100% {
+		@include transform( scale(1));
+	}
+}

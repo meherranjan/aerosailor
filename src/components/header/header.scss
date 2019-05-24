@@ -1,0 +1,110 @@
+body:before {
+  content: '';
+  position: absolute;
+  opacity: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background: #17A085;
+  z-index: -100000000;
+}
+
+.line-container {
+  width: 105%;
+  height: 200px;
+  position: absolute;
+  left: -5px;
+  top: -25px;
+  overflow: hidden;
+}
+
+.line-container svg {
+  height: 100vh;
+  width: 100vw;
+}
+
+.line-container svg:not(:root) {
+  overflow: hidden;
+}
+
+.line-container svg path {
+  fill: none;
+  stroke: #87D1C3;
+  opacity: 0.8;
+  stroke-width: 0.5px;
+  vector-effect: non-scaling-stroke;
+}
+
+header {
+  height: 150px;
+}
+
+header section {
+    height: 100%;
+}
+
+header .masthead-title {
+  position: relative;
+  margin-bottom: 0;
+  color: transparent;
+}
+
+header .masthead-title a.brand {
+  display: block;
+  position: relative;
+  color: inherit;
+  text-transform: capitalize;
+  text-decoration: none;
+  width: 224px;
+  height: auto;
+}
+
+header .masthead-title a.brand img {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+header section nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+header section.logo-container,
+header section.navigation {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+header section.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header section.navigation ul li {
+  position: relative;
+  float: left;
+  margin-left: 60px;
+  height: 36px;
+}
+
+header section.navigation ul li:last-child {
+  margin-right: 60px;
+}
+
+
+header section.navigation ul li a {
+  text-decoration: none;
+  font-size: 60%;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: white;
+}

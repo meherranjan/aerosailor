@@ -1,3 +1,5 @@
+@import "./fonts.scss";
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -618,5 +620,25 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+
+/* Container Size for max-width */
+@media (min-width: 768px) {
+  .pure-c {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .pure-c {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .pure-c {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
   }
 }

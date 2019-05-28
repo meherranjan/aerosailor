@@ -1,5 +1,5 @@
 import React from 'react'
-import aerosailorsvg from '../../../static/logo.svg'
+import aerosailorsvg from '../../../../static/logo.svg'
 
 const Logo = () => (
 	<section className="logo-container pure-u-1-4">

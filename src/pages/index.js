@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+
 import PostLink from "../components/core/post-link"
 
 const IndexPage = ({

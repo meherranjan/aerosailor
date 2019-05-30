@@ -7,6 +7,7 @@ categories:
 - algorithms
 excerpt_separator: "<!--more-->"
 date: 2018-10-09
+path: '/blog/recursive-binary-serarch-in-javascript'
 ---
 
 Divide and rule has been historically the most successful tactics for many leaders of the civilization. It breaks down a complex problem set so dramatically down that at one point the rewards are exponential.

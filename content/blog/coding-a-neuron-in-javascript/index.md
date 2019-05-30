@@ -6,6 +6,7 @@ categories:
 - neuron
 - artificial intelligence
 date: 2018-10-09
+path: '/blog/coding-a-neuron-in-javascript/'
 ---
 
 We see around ourselves surrounded by some very common and strange use cases 

@@ -5,6 +5,7 @@ categories:
 - functional programming
 - foundation6
 date: 2018-10-09
+path: 'elm-foundation'
 ---
 
 Elm is a functional language that compiles to JavaScript. If you are used to using a tech stack that involved Webpack, 

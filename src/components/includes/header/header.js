@@ -1,18 +1,19 @@
-// Theirs
 import React from 'react'
-import "purecss/build/pure-min.css"
-import "purecss/build/grids-responsive.css"
+import { useSiteMetadata } from '../../../hooks/use-site-metadata.js'
 
-// Mine
 import "./header.scss"
 import Logo from "./logo"
 import Nav from "./nav"
 
-const Header = () => (
-	<header className='pure-g'>
+const Header = () => {
+	const { title } = useSiteMetadata()
+	return <header>
+		<h1>{
+				title
+		}</h1>
 		<Logo />
 		<Nav />
 	</header>
-)
+}
 
 export default Header

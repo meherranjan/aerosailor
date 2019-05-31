@@ -1,7 +1,8 @@
 ---
 title: 'Machine Learning: Coding a Neuron in JavaScript - Part 1'
 path: '/blog/coding-a-neuron-in-javascript'
-date: '2015-05-28T22:40:32.169Z'
+created: '2015-05-28T22:40:32.169Z'
+modified: '2015-05-29T22:40:32.169Z'
 ---
 
 We see around ourselves surrounded by some very common and strange use cases 

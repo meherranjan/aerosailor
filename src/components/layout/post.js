@@ -1,16 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
+import PostSEO from "../core/post-seo"
 
 const Post = ({
-  data, // this prop will be injected by the GraphQL query below.
+  data,
 }) => {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data
+  const { frontmatter: { created, modified, title }, html } = markdownRemark
   return (
+    <PostSEO {...frontmatter}/>
     <div className="blog-post-container">
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <h1>{title}</h1>
+        <h2>Created on: {created}</h2>
+        <h3>Update on: {modified}</h3>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -25,7 +28,8 @@ export const pageQuery = graphql`
     markdownRemark (fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        created(formatString: "MMMM DD, YYYY")
+        modified(formatString: "MMMM DD, YYYY")
         path
         title
       }

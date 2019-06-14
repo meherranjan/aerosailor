@@ -1,12 +1,14 @@
 import React from 'react'
-import aerosailorsvg from '../../../../static/logo.svg'
+import aerosailorIcon from '../../../../static/logo-icon.svg'
+import aerosailorText from '../../../../static/logo-text.svg'
 
 const Logo =
 	() =>
 		<div className="logo-container">
 			<h1 className="masthead-title">
 				<a className="brand" href="/" title="Aerosailor">
-					<img src={aerosailorsvg} alt="Aerosailor Logo" />
+					<img className="for-mobile" src={aerosailorIcon} alt="Aerosailor Logo" />
+					<img className="for-desktop" src={aerosailorText} alt="Aerosailor Logo" />
 				</a>
 			</h1>
 		</div>

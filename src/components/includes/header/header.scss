@@ -1,4 +1,5 @@
 @import "../xy-grid.scss";
+
 $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 $menuItems: 4;
 
@@ -41,7 +42,7 @@ header {
     li {
 
       &:last-child {
-        margin-right: 60px;
+        // margin-right: 60px;
       }
 
       a {
@@ -62,7 +63,7 @@ header {
     margin-bottom: 0;
     color: transparent;
     height: 64px;
-    line-height: 64px;
+    line-height: 60px;
 
     a.brand {
       @include horizontal-center;
@@ -74,7 +75,6 @@ header {
       height: auto;
 
       img {
-        width: 100%;
         margin-bottom: 0;
       }
 
@@ -102,7 +102,8 @@ header {
 
     div.logo-container {
       a.brand {
-        width: 140px;
+        width: 64px;
+        height: 64px;
       }
     }
 
@@ -117,12 +118,26 @@ header {
         left: 0;
         height: 64px;
         width: 100%;
-        background:#000;
+        background: #000;
         opacity: 0.8;
         overflow: hidden;
         transition: all 0.5s ease-out, opacity 1s ease-out;
         transition-delay: 0.2s;
         z-index: 1;
+
+        .logo-container {
+          display: inline-block;
+          position: absolute;
+          height: 100%;
+          line-height: 50px;
+          text-align: center;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          .for-desktop {
+            display: none;
+          }
+        }
 
         .burger-container {
           position: relative;
@@ -174,7 +189,7 @@ header {
             margin-top: 5px;
             transform: scale(1.15) translateY(-30px);
             opacity: 0;
-            transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+            transition: transform 0.5s $cubic, opacity 0.3s ease-in;
 
             @for $i from 1 through $menuItems {
               &:nth-child(#{$i}) {
@@ -188,7 +203,8 @@ header {
               color: #FFF;
               font-weight: 100;
               text-decoration: none;
-              font-size: 22px;
+              font-size: 1em;
+              font-family: 'zero-light', sans-serif;
               line-height: 2.35;
               font-weight: 200;
               width: 100%;
@@ -200,7 +216,7 @@ header {
           height: 315px;
           background: #000;
           opacity: 1;
-          transition: height 0.3s ease-in, opacity 0.3s ease-in;
+          transition: height 0.3s ease-in, opacity 0.5s ease-in;
           transition-delay: 0.25s;
 
           .burger-container {

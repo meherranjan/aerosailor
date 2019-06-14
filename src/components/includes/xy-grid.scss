@@ -1,0 +1,13 @@
+@import '~foundation-sites/scss/vendor/normalize';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/functions/contain';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
+@import '~foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
+@import "~foundation-sites/scss/util/util";
+@import "~foundation-sites/scss/global";
+@import "~foundation-sites/scss/xy-grid/xy-grid";
+
+@include foundation-xy-grid-classes;

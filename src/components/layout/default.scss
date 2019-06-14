@@ -1,4 +1,3 @@
-@import "../includes/fonts.scss";
 
 html {
   font-family: sans-serif;
@@ -202,7 +201,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'zero-regular', Arial, Helvetica, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

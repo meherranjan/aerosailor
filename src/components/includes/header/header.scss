@@ -1,14 +1,6 @@
-body:before {
-  content: '';
-  position: absolute;
-  opacity: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 150px;
-  background: #17A085;
-  z-index: -100000000;
-}
+@import "../xy-grid.scss";
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+$menuItems: 4;
 
 .line-container {
   width: 105%;
@@ -38,73 +30,225 @@ body:before {
 
 header {
   height: 150px;
-}
-
-header section {
-    height: 100%;
-}
-
-header .masthead-title {
-  position: relative;
-  margin-bottom: 0;
-  color: transparent;
-}
-
-header .masthead-title a.brand {
-  display: block;
-  position: relative;
-  color: inherit;
-  text-transform: capitalize;
-  text-decoration: none;
-  width: 224px;
-  height: auto;
-}
-
-header .masthead-title a.brand img {
   width: 100%;
-  margin-bottom: 0;
+  z-index: -100000000;
+
+  div.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+
+      &:last-child {
+        margin-right: 60px;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 60%;
+        letter-spacing: 4px;
+        color: white;
+      }
+    }
+  }
+
+  section {
+    height: 100%;
+  }
+
+  .masthead-title {
+    position: relative;
+    margin-bottom: 0;
+    color: transparent;
+    height: 64px;
+    line-height: 64px;
+
+    a.brand {
+      @include horizontal-center;
+      display: block;
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+      width: 224px;
+      height: auto;
+
+      img {
+        width: 100%;
+        margin-bottom: 0;
+      }
+
+      header section nav {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+
+    }
+  }
+
 }
 
-header section nav {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  header {
+    height: 64px;
+    padding: 0px !important;
+
+    >div {
+      height: 100%;
+    }
+
+    div.logo-container {
+      a.brand {
+        width: 140px;
+      }
+    }
+
+    nav {
+      width: 100%;
+      height: 100%;
+
+      .header {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 64px;
+        width: 100%;
+        background:#000;
+        opacity: 0.8;
+        overflow: hidden;
+        transition: all 0.5s ease-out, opacity 1s ease-out;
+        transition-delay: 0.2s;
+        z-index: 1;
+
+        .burger-container {
+          position: relative;
+          display: inline-block;
+          height: 64px;
+          width: 64px;
+          cursor: pointer;
+          transform: rotate(0deg);
+          transition: all 0.3s $cubic;
+          user-select: none;
+          -webkit-tap-highlight-color: transparent;
+
+          #burger {
+            width: 18px;
+            height: 8px;
+            position: relative;
+            display: block;
+            margin: -4px auto 0;
+            top: 50%;
+
+            .bar {
+              width: 100%;
+              height: 1px;
+              display: block;
+              position: relative;
+              background: #FFF;
+              transition: all 0.3s $cubic;
+              transition-delay: 0s;
+
+              &.topBar {
+                transform: translateY(0px) rotate(0deg);
+              }
+
+              &.btmBar {
+                transform: translateY(6px) rotate(0deg);
+              }
+            }
+          }
+        }
+
+        ul.menu {
+          position: relative;
+          display: block;
+          padding: 0px 48px 0;
+          list-style: none;
+
+          li.menu-item {
+            border-bottom: 1px solid #333;
+            margin-top: 5px;
+            transform: scale(1.15) translateY(-30px);
+            opacity: 0;
+            transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+
+            @for $i from 1 through $menuItems {
+              &:nth-child(#{$i}) {
+                transition-delay: #{0.56 - ($i * 0.07)}s;
+              }
+            }
+
+            a {
+              display: block;
+              position: relative;
+              color: #FFF;
+              font-weight: 100;
+              text-decoration: none;
+              font-size: 22px;
+              line-height: 2.35;
+              font-weight: 200;
+              width: 100%;
+            }
+          }
+        }
+
+        &.menu-opened {
+          height: 315px;
+          background: #000;
+          opacity: 1;
+          transition: height 0.3s ease-in, opacity 0.3s ease-in;
+          transition-delay: 0.25s;
+
+          .burger-container {
+            transform: rotate(90deg);
+
+            #burger {
+              .bar {
+                transition: all 0.4s $cubic;
+                transition-delay: 0.2s;
+
+                &.topBar {
+                  transform: translateY(4px) rotate(45deg);
+                }
+
+                &.btmBar {
+                  transform: translateY(3px) rotate(-45deg);
+                }
+              }
+            }
+          }
+
+          ul.menu {
+            li.menu-item {
+              transform: scale(1) translateY(0px);
+              opacity: 1;
+
+              @for $i from 1 through $menuItems {
+                &:nth-child(#{$i}) {
+                  transition-delay: #{0.07 * $i+0.2}s;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
 }
 
+/* Medium and up */
+@media screen and (min-width: 40em) {}
 
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
 
-header section.logo-container,
-header section.navigation {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  height: 100%;
-}
+/* Large and up */
+@media screen and (min-width: 64em) {}
 
-header section.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-header section.navigation ul li {
-  position: relative;
-  float: left;
-  margin-left: 60px;
-  height: 36px;
-}
-
-header section.navigation ul li:last-child {
-  margin-right: 60px;
-}
-
-
-header section.navigation ul li a {
-  text-decoration: none;
-  font-size: 60%;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: white;
-}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

@@ -1,7 +1,4 @@
 import React, { useEffect } from 'react'
-import "purecss/build/pure-min.css"
-import "purecss/build/grids-responsive.css"
-
 import "./header.css"
 
 const SvgAnimation =

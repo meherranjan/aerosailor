@@ -2,17 +2,14 @@ import React from 'react'
 import { useSiteMetadata } from '../../../hooks/use-site-metadata.js'
 
 import "./header.scss"
-import Logo from "./logo"
-import Nav from "./nav"
+import NavigationMenu from "./nav"
 
 const Header = () => {
 	const { title } = useSiteMetadata()
-	return <header>
-		<h1>{
-				title
-		}</h1>
-		<Logo />
-		<Nav />
+	return <header className='grid-container'>
+		<div className="grid-x">
+			<NavigationMenu />
+		</div>
 	</header>
 }
 

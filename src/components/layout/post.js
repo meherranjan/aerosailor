@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import PostSEO from "../core/post-seo"
+// import PostSEO from "../core/post-seo"
 
 const Post = ({
   data,
@@ -8,8 +8,9 @@ const Post = ({
   const { markdownRemark } = data
   const { frontmatter: { created, modified, title }, html } = markdownRemark
   return (
-    <PostSEO {...frontmatter}/>
     <div className="blog-post-container">
+    {/* <PostSEO {...markdownRemark} />
+    {console.log(markdownRemark)} */}
       <div className="blog-post">
         <h1>{title}</h1>
         <h2>Created on: {created}</h2>

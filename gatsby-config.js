@@ -31,6 +31,7 @@ module.exports = {
         name: `blog`,
       },
 		},
+		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-remark`,
 		`gatsby-transformer-sharp`,
@@ -48,6 +49,6 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-offline`,
-		`gatsby-plugin-sass`,
+		`gatsby-plugin-sass`
 	],
 }

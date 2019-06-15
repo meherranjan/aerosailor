@@ -22,9 +22,9 @@ const IndexPage = ({
       <SEO />
       <Header />
       <article>
-        {posts}
+        {/* {posts} */}
       </article>
-      <Footer />
+      {/* <Footer /> */}
     </main>)
 }
 

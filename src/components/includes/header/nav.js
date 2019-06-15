@@ -27,6 +27,7 @@ const NavigationMenu =
 						<li class="menu-item"><a href="#">Blog</a></li>
 						<li class="menu-item"><a href="#">Training</a></li>
 						<li class="menu-item"><a href="#">Tutorials</a></li>
+						<li class="menu-item"><a href="#">Contact</a></li>
 					</ul>
 				</div>
 			</nav>

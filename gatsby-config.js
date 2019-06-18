@@ -11,29 +11,43 @@ module.exports = {
 		twitterUsername: "@meherranjan",
 
 		siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
-    pathPrefix,
-    title: website.title,
-    titleAlt: website.titleAlt,
-    description: website.description,
-    banner: website.logo,
-    headline: website.headline,
-    siteLanguage: website.siteLanguage,
-    ogLanguage: website.ogLanguage,
-    author: website.author,
-    twitter: website.twitter,
-    facebook: website.facebook,
+		pathPrefix,
+		title: website.title,
+		titleAlt: website.titleAlt,
+		description: website.description,
+		banner: website.logo,
+		headline: website.headline,
+		siteLanguage: website.siteLanguage,
+		ogLanguage: website.ogLanguage,
+		author: website.author,
+		twitter: website.twitter,
+		facebook: website.facebook,
 	},
 	plugins: [
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-        path: `${__dirname}/content/`,
-        name: `blog`,
-      },
+				path: `${__dirname}/content/`,
+				name: `blog`,
+			},
+		},
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins: [
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth: 720,
+							stripMetadata: true,
+							defaultQuality: 100,
+						},
+					},
+				],
+			},
 		},
 		`gatsby-plugin-styled-components`,
 		`gatsby-plugin-react-helmet`,
-		`gatsby-transformer-remark`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{

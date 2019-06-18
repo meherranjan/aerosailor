@@ -3,6 +3,7 @@ import Logo from "./logo"
 import cn from 'classnames'
 
 import './nav.scss'
+const menuItems = ['Home', 'Blog', 'Training', 'Tutorials', 'Contact']
 
 const NavigationMenu =
 	() => {
@@ -13,21 +14,17 @@ const NavigationMenu =
 		return <div className="navigation menu cell small-12">
 			<nav>
 				<div className={toggleClass}>
-					<div class="burger-container" onClick={toggle}>
+					<div className="burger-container" onClick={toggle}>
 						<div id="burger">
-							<div class="bar topBar"></div>
-							<div class="bar btmBar"></div>
+							<div className="bar topBar"></div>
+							<div className="bar btmBar"></div>
 						</div>
 					</div>
 
 					<Logo />
 
-					<ul class="menu">
-						<li class="menu-item"><a href="#">Home</a></li>
-						<li class="menu-item"><a href="#">Blog</a></li>
-						<li class="menu-item"><a href="#">Training</a></li>
-						<li class="menu-item"><a href="#">Tutorials</a></li>
-						<li class="menu-item"><a href="#">Contact</a></li>
+					<ul className="menu">
+						{ menuItems.map((item, key) => <li key={key} className="menu-item"><a href={item}>{item}</a></li>) }
 					</ul>
 				</div>
 			</nav>

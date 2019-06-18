@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import PostLink from "../components/core/post-link"
 import SEO from "../components/includes/seo/"
 import Header from "../components/includes/header/header"
-import Footer from "../components/includes/footer/footer"
 import GlobalStyles from "../components/includes/fonts"
 
 const IndexPage = ({
@@ -12,19 +11,12 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const posts =
-    edges
-      .filter(edge => !!edge.node.frontmatter.created)
-      .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
   return (
     <main>
       <GlobalStyles />
       <SEO />
       <Header />
-      <article>
-        {/* {posts} */}
-      </article>
-      {/* <Footer /> */}
+      <PostLink edges={edges}/>
     </main>)
 }
 
@@ -42,6 +34,13 @@ export const pageQuery = graphql`
             path
             title
             modified
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 250) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

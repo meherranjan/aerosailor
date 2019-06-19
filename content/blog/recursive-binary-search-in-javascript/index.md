@@ -1,5 +1,5 @@
 ---
-title: 'An Easy Recursive Binary Search in JavaScript'
+title: 'Recursive Binary Search in JavaScript'
 path: '/blog/recursive-binary-search-in-javascript'
 created: '2015-07-28T22:40:32.169Z'
 modified: '2015-05-30T22:40:32.169Z'

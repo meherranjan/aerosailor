@@ -16,6 +16,9 @@ const IndexPage = ({
       <GlobalStyles />
       <SEO />
       <Header />
+      <div className="latest-post-section">
+        <h3>Latest <i></i></h3>
+      </div>
       <PostLink edges={edges}/>
     </main>)
 }
@@ -36,7 +39,7 @@ export const pageQuery = graphql`
             modified
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 400, maxHeight: 250) {
+                fluid(maxWidth: 400, maxHeight: 180) {
                   ...GatsbyImageSharpFluid
                 }
               }

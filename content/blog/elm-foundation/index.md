@@ -4,6 +4,7 @@ path: '/blog/elm-foundation'
 created: '2015-06-28T22:40:32.169Z'
 modified: '2015-05-30T22:40:32.169Z'
 thumbnail: './featured-image.png'
+tags: ["elm", "foundation-sites", "functional programming"]
 ---
 
 Elm is a functional language that compiles to JavaScript. If you are used to using a tech stack that involved Webpack, 

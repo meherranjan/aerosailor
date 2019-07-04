@@ -1,0 +1,23 @@
+
+
+.gatsby-highlight {
+  .language-javascript {
+    background: #26293a;
+  }
+  code[class*="language-"], pre[class*="language-"] {
+    color: #fff;
+  }
+  .token.selector, .token.important, .token.atrule, .token.keyword, .token.builtin {
+    color: #c680ff;
+  }
+
+  .token.operator, .token.entity, .token.url {
+    color: #989daa;
+  }
+  .token.function{
+    color: #fff;
+  }
+  .token.boolean, .token.number, .token.string{
+    color: #8ae234;
+  }
+}

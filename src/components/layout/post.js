@@ -1,26 +1,44 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { graphql } from "gatsby"
+import SEO from "../../components/includes/seo/"
+import Header from "../../components/includes/header/header"
+import GlobalStyles from "../../components/includes/fonts"
+import PostTags from "../../components/core/post-tags"
 // import PostSEO from "../core/post-seo"
+import './post.scss'
 
 const Post = ({
-  data,
+  data
 }) => {
-  const { markdownRemark } = data
-  const { frontmatter: { created, modified, title }, html } = markdownRemark
+  const { fields: { readingTime }, frontmatter: { created, modified, title, tags }, html } = data.markdownRemark
   return (
-    <div className="blog-post-container">
-    {/* <PostSEO {...markdownRemark} />
-    {console.log(markdownRemark)} */}
-      <div className="blog-post">
-        <h1>{title}</h1>
-        <h2>Created on: {created}</h2>
-        <h3>Update on: {modified}</h3>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+    <Fragment>
+      <GlobalStyles />
+      <SEO />
+      <Header />
+      <div className="blog-post-container">
+        {/* <PostSEO {...markdownRemark} /> */}
+        <PostTags list={tags} />
+        <div className="blog-post">
+          <h1 className='post-title'>{title}</h1>
+          <div className="post-date">
+            <span>{ created }</span>
+            <span> — </span>
+            <span>{ readingTime.text }</span>
+          </div>
+          <div className="post-date">
+            <span>New Update Added On</span> 
+            <span> — </span>
+            <span>{modified}</span>
+          </div>
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </div>
       </div>
-    </div>
+
+    </Fragment>
   )
 }
 
@@ -33,6 +51,12 @@ export const pageQuery = graphql`
         modified(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }

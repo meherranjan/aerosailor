@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 import './post-link.scss'
 
-const PostLink = ({ edges }) => {
+const PostLink = ({edges}) => {
   return edges
     .filter(edge => !!edge.node.frontmatter.created)
     .map(edge => {
       let fm = edge.node.frontmatter;
-      return <article key={edge.node.id} className="featured-posts-list">
+      return <div key={edge.node.id} className="featured-posts-list">
         <div className="post-image">
           <Img
             fluid={fm.thumbnail.childImageSharp.fluid}
@@ -22,9 +22,15 @@ const PostLink = ({ edges }) => {
             {fm.title}
           </Link>
         </div>
-      </article>
+      </div>
     }
     )
 }
 
-export default PostLink
+const PostLinkContainer =
+  ({ edges }) =>
+    <article>
+      <PostLink edges={edges} />
+    </article>
+
+export default PostLinkContainer

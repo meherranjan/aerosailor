@@ -1,0 +1,35 @@
+.blog-post-container {
+  padding: 15px;
+
+  .post-title {
+    margin-top: 0.5rem;
+    font-family: zero-medium, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+
+    a {
+      color: #2d3e4f;
+    }
+
+    &.sizeup {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+  }
+
+  .post-date {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: #232323;
+    font-size: 0.65rem;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-family: zero-book, sans-serif;
+    & + .post-date {
+      margin-top: 0;
+      font-style: italic;
+    }
+  }
+}

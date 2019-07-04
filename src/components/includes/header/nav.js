@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { Link } from "gatsby"
 import Logo from "./logo"
 import cn from 'classnames'
 
 import './nav.scss'
-const menuItems = ['Home', 'Blog', 'Training', 'Tutorials', 'Contact']
 
 const NavigationMenu =
 	() => {
@@ -20,11 +20,13 @@ const NavigationMenu =
 							<div className="bar btmBar"></div>
 						</div>
 					</div>
-
 					<Logo />
-
 					<ul className="menu">
-						{ menuItems.map((item, key) => <li key={key} className="menu-item"><a href={item}>{item}</a></li>) }
+						<li className="menu-item"><Link to='/'>Home</Link></li>
+						<li className="menu-item"><Link to='/blog'>Blog</Link></li>
+						<li className="menu-item"><a href='/'>Training</a></li>
+						<li className="menu-item"><a href='/'>Tutorials</a></li>
+						<li className="menu-item"><a href='/'>Contact</a></li>
 					</ul>
 				</div>
 			</nav>

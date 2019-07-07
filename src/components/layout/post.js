@@ -6,11 +6,25 @@ import GlobalStyles from "../../components/includes/fonts"
 import PostTags from "../../components/core/post-tags"
 // import PostSEO from "../core/post-seo"
 import './post.scss'
+import split from 'ramda/src/split'
+import join from 'ramda/src/join'
 
+const withDropCase = html => {
+  let space = ' ';
+  let divider = split(space);
+  let spaced = join(space);
+  let chunks = divider(html);
+  chunks[0] = `<p><span class='post-drop-case'>${ chunks[0][3] }</span>`;
+  return spaced(chunks)
+  // let firstLetters =<span></span>  html.split(' ')[0]
+  // let = spa<element></element>n <<span></span>e</<span></span>e 
+  // return 0;
+}
 const Post = ({
   data
 }) => {
   const { fields: { readingTime }, frontmatter: { created, modified, title, tags }, html } = data.markdownRemark
+  const htmlWithDropCase = withDropCase(html)
   return (
     <Fragment>
       <GlobalStyles />
@@ -33,7 +47,7 @@ const Post = ({
           </div>
           <div
             className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: htmlWithDropCase }}
           />
         </div>
       </div>

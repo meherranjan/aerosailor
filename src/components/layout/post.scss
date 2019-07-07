@@ -1,6 +1,20 @@
 .blog-post-container {
   padding: 15px;
 
+  .post-drop-case {
+    font-family: zero-bold;
+    font-size: 54.85px;
+    padding-top: 3.5px;
+    margin-left: 1px;
+    margin-right: 6px;
+    --x-height-multiplier: 0.342;
+    --baseline-multiplier: 0.22;
+    letter-spacing: -.03em;
+    line-height: 0.8;
+    float: left;
+    margin-bottom: -0.03em;
+  }
+
   .post-title {
     margin-top: 0.5rem;
     font-family: zero-medium, sans-serif;

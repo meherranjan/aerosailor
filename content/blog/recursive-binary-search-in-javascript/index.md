@@ -7,9 +7,9 @@ thumbnail: './featured-image.jpg'
 tags: ["recursion", "algorithms", "javascript"]
 ---
 
-![Retro Style Recursion Banner Image](./featured-image.jpg)
-
 Divide and rule has been historically the most successful tactics for many leaders of the civilization. It breaks down a complex problem set so dramatically down that at one point the rewards are exponential.
+
+![Retro Style Recursion Banner Image](./featured-image.jpg)
 
 When it comes to programming divide and rule, scares many. However, this successful tactic isn't that difficult to master. One good way to get better at this pattern is by using it frequently in your day to day work.
 

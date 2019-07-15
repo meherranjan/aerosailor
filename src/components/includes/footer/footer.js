@@ -10,13 +10,12 @@ const AboutMe =
       <h5>
         I am Meher.
         I work with <a href="https://www.credit-suisse.com/">Credit Suisse</a> in Pune, India.
-        I am passionate about JavaScript, React, Elm & GraphQL.
       </h5>
       <h5>
-        I build high performace apps with a spoonful of aesthetics.
+        I build high performance apps using React, Redux, GraphQL & RamdaJS.
       </h5>
       <h5>
-        You can find me on &nbsp;  —
+        You can find me on
       </h5>
     </section>
 
@@ -25,8 +24,8 @@ const ConnectOnSocial = () => <section className='connect-on-social'>
     {
       socialList.map(obj =>
         <li>
-          <a href={obj.url} target="_blank">
-            <img src={obj.icon} />
+          <a href={obj.url} target="_blank" rel="noopener noreferrer">
+            <img src={obj.icon} alt={obj.alt}/>
           </a>
         </li>
       )

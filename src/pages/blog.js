@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import PostLink from "../components/core/post-link"
 import SEO from "../components/includes/seo"
 import Header from "../components/includes/header/header"
+import Footer from "../components/includes/footer/footer"
 import GlobalStyles from "../components/includes/fonts"
 
 const BlogPage = ({
@@ -20,6 +21,7 @@ const BlogPage = ({
         <h3>Latest <i></i></h3>
       </div>
       <PostLink edges={edges}/>
+      <Footer />
     </main>)
 }
 

@@ -1,5 +1,5 @@
 ---
-title: 'Machine Learning: Coding a Neuron in JavaScript — 1'
+title: 'Coding a Neuron in JavaScript — I'
 path: '/blog/coding-a-neuron-in-javascript'
 created: '2015-05-28T22:40:32.169Z'
 modified: '2015-05-29T22:40:32.169Z'

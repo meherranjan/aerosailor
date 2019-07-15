@@ -1,4 +1,3 @@
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -622,7 +621,11 @@ pre tt:after {
   }
 }
 
-
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /* Container Size for max-width */
 @media (min-width: 768px) {
   .pure-c {

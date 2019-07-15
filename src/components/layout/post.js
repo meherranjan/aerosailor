@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import { graphql } from "gatsby"
 import SEO from "../../components/includes/seo/"
 import Header from "../../components/includes/header/header"
+import Footer from "../../components/includes/footer/footer"
 import GlobalStyles from "../../components/includes/fonts"
 import PostTags from "../../components/core/post-tags"
 // import PostSEO from "../core/post-seo"
@@ -10,16 +11,11 @@ import split from 'ramda/src/split'
 import join from 'ramda/src/join'
 
 const withDropCase = html => {
-  let space = ' ';
-  let divider = split(space);
-  let spaced = join(space);
-  let chunks = divider(html);
-  chunks[0] = `<p><span class='post-drop-case'>${ chunks[0][3] }</span>`;
+  let space = ' ', divider = split(space), spaced = join(space), chunks = divider(html);
+  chunks[0] = `<p><span class='post-drop-case'>${chunks[0][3]}</span>`;
   return spaced(chunks)
-  // let firstLetters =<span></span>  html.split(' ')[0]
-  // let = spa<element></element>n <<span></span>e</<span></span>e 
-  // return 0;
 }
+
 const Post = ({
   data
 }) => {
@@ -36,12 +32,12 @@ const Post = ({
         <div className="blog-post">
           <h1 className='post-title'>{title}</h1>
           <div className="post-date">
-            <span>{ created }</span>
+            <span>{created}</span>
             <span> — </span>
-            <span>{ readingTime.text }</span>
+            <span>{readingTime.text}</span>
           </div>
           <div className="post-date">
-            <span>New Update Added On</span> 
+            <span>New Update Added On</span>
             <span> — </span>
             <span>{modified}</span>
           </div>
@@ -51,7 +47,7 @@ const Post = ({
           />
         </div>
       </div>
-
+      <Footer />
     </Fragment>
   )
 }

@@ -66,7 +66,6 @@ binarySearch(sortedList, 6)
 Recursive binary search is simple enough too if we just break down the problem. Every recursive function has 2 parts: base case and recursive case. The base case ensures the function doesn't run into an infinite loop. It helps visualize the recursive case.
 Let's see how a recursive binary search would look like:
 
-
 ```javascript
 sortedList = [11, 24, 33, 64, 95, 106, 217, 228, 299, 310]
 
@@ -89,8 +88,8 @@ const recursiveBS = (list, item, low, high) => {
 			recursiveBS(list, item, low, mid - 1)
 		} else {
 			recursiveBS(list, item, mid + 1, high)
-		}	
-	}
+    }
+  }
 }
 
 recursiveBS(sortedList, 217)

@@ -1,6 +1,23 @@
 .footer-container {
-  padding: 24px 0;
+  padding: 48px 0 ;
   background: #333533;
+
+  .about-me {
+    color: #fff;
+    margin: 0 30px;
+    a {
+      text-decoration: none;
+      color: rgb(138, 180, 248);
+    }
+    h2, h5 {
+      font-weight: normal;
+      font-family: zero-book, sans-serif;
+    }
+    h5 {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
 
   .subscribe {
     input {
@@ -15,13 +32,14 @@
 
   .connect-on-social {
     display: flex;
+    margin-left: 40px;
+    margin-right: 40px;
 
     ul {
       width: 100%;
       margin-bottom: 0;
       list-style: none;
-      margin-left: 40px;
-      margin-right: 40px;
+      margin-left: 0;
     }
 
     li {
@@ -37,8 +55,8 @@
         cursor: pointer;
 
         img {
-        width: 24px;
-        height: 24px;
+          width: 16px;
+          height: 16px;
           filter: invert(1);
         }
       }

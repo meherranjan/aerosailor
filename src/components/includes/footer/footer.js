@@ -1,34 +1,25 @@
 import React from 'react'
-import linkedin from '../../../../static/social/linkedin.svg';
-import fb from '../../../../static/social/facebook.svg';
-import github from '../../../../static/social/github.svg';
-import gmail from '../../../../static/social/gmail.svg';
-import instagram from '../../../../static/social/instagram.svg';
+import socialList from './social'
 import './footer.scss'
 
 // const Copyright = () => <section className='copyright'></section>
-// const TechStack = () => <section className='tech-stack'></section>
+const AboutMe =
+  () =>
+    <section className='about-me'>
+      <h2>Hello</h2>
+      <h5>
+        I am Meher.
+        I work with <a href="https://www.credit-suisse.com/">Credit Suisse</a> in Pune, India.
+        I am passionate about JavaScript, React, Elm & GraphQL.
+      </h5>
+      <h5>
+        I build high performace apps with a spoonful of aesthetics.
+      </h5>
+      <h5>
+        You can find me on &nbsp;  —
+      </h5>
+    </section>
 
-const socialList = [{
-  icon: linkedin,
-  url: 'https://in.linkedin.com/in/meherranjan'
-},
-{
-  icon: github,
-  url: 'https://github.com/meherranjan'
-},
-{
-  icon: gmail,
-  url: 'mailto:hmeherranjan@gmail.com'
-},
-{
-  icon: instagram,
-  url: 'https://instagram.com/meherranjan'
-},
-{
-  icon: fb,
-  url: 'https://facebook.com/meherranjan'
-}]
 const ConnectOnSocial = () => <section className='connect-on-social'>
   <ul className="clearfix">
     {
@@ -46,6 +37,7 @@ const ConnectOnSocial = () => <section className='connect-on-social'>
 const Footer =
   () =>
     <footer className="footer-container">
+      <AboutMe />
       <ConnectOnSocial />
     </footer>
 

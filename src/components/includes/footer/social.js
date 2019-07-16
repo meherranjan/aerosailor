@@ -1,7 +1,6 @@
 import linkedin from '../../../../static/social/linkedin.svg';
 import fb from '../../../../static/social/facebook.svg';
 import github from '../../../../static/social/github.svg';
-import gmail from '../../../../static/social/gmail.svg';
 import instagram from '../../../../static/social/instagram.svg';
 
 const socialList = [{
@@ -23,11 +22,6 @@ const socialList = [{
   alt: 'Facebook Profile',
   icon: fb,
   url: 'https://facebook.com/meherranjan'
-},
-{
-  alt: 'Send me an Email',
-  icon: gmail,
-  url: 'mailto:hmeherranjan@gmail.com'
 }
 ]
 

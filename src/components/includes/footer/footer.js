@@ -2,7 +2,10 @@ import React from 'react'
 import socialList from './social'
 import './footer.scss'
 
-// const Copyright = () => <section className='copyright'></section>
+const Copyright = () => <section className='copyright'>
+  <div>© 2015 – 2019 Aerosailor</div>
+</section>
+
 const AboutMe =
   () =>
     <section className='about-me'>
@@ -14,18 +17,16 @@ const AboutMe =
       <h5>
         I build high performance apps using React, Redux, GraphQL & RamdaJS.
       </h5>
-      <h5>
-        You can find me on
-      </h5>
     </section>
 
 const ConnectOnSocial = () => <section className='connect-on-social'>
+  <h5>You can find me on</h5>
   <ul className="clearfix">
     {
       socialList.map(obj =>
         <li>
           <a href={obj.url} target="_blank" rel="noopener noreferrer">
-            <img src={obj.icon} alt={obj.alt}/>
+            <img src={obj.icon} alt={obj.alt} />
           </a>
         </li>
       )
@@ -38,6 +39,7 @@ const Footer =
     <footer className="footer-container">
       <AboutMe />
       <ConnectOnSocial />
+      <Copyright />
     </footer>
 
 export default Footer

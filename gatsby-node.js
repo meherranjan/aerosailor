@@ -25,12 +25,17 @@ exports.createPages = async function ({ actions, graphql }) {
     }
     `)
 
-  data.allMarkdownRemark.edges.forEach(edge => {
+  const posts = data.allMarkdownRemark.edges
+  posts.forEach((edge, index) => {
     const slug = edge.node.fields.slug
     actions.createPage({
       path: slug,
       component: require.resolve(`./src/components/layout/post.js`),
-      context: { slug: slug },
+      context: {
+        slug: slug,
+        prev: index === 0 ? posts[posts.length - 1] : posts[index - 1],
+        next: index === posts.length - 1 ? posts[0] : posts[index + 1],
+      },
     })
   })
 }
@@ -40,7 +45,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode})
+    const slug = createFilePath({ node, getNode })
     createNodeField({
       node,
       name: `slug`,

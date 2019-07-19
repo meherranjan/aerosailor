@@ -5,6 +5,7 @@ import Header from "../../components/includes/header/header"
 import Footer from "../../components/includes/footer/footer"
 import GlobalStyles from "../../components/includes/fonts"
 import PostTags from "../../components/core/post-tags"
+import ReadMore from "../../components/core/read-more"
 // import PostSEO from "../core/post-seo"
 import './post.scss'
 import split from 'ramda/src/split'
@@ -16,9 +17,7 @@ const withDropCase = html => {
   return spaced(chunks)
 }
 
-const Post = ({
-  data
-}) => {
+const Post = ({ data, pageContext })=> {
   const { fields: { readingTime }, frontmatter: { created, modified, title, tags }, html } = data.markdownRemark
   const htmlWithDropCase = withDropCase(html)
   return (
@@ -47,6 +46,7 @@ const Post = ({
           />
         </div>
       </div>
+      <ReadMore posts={pageContext} />
       <Footer />
     </Fragment>
   )

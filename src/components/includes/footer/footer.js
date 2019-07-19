@@ -28,8 +28,8 @@ const ConnectOnSocial =
       <a className="underscore" href="mailto:hmeherranjan@gmail.com">hello@aerosailor.com</a>
       <ul className="clearfix">
         {
-          socialList.map(obj =>
-            <li>
+          socialList.map((obj, index) =>
+            <li key={index}>
               <a href={obj.url} target="_blank" rel="noopener noreferrer">
                 <img src={obj.icon} alt={obj.alt} />
               </a>

@@ -6,10 +6,12 @@ import Footer from "../../components/includes/footer/footer"
 import GlobalStyles from "../../components/includes/fonts"
 import PostTags from "../../components/core/post-tags"
 import ReadMore from "../../components/core/read-more"
+import PostSharer from "../core/post-share";
 // import PostSEO from "../core/post-seo"
-import './post.scss'
+
 import split from 'ramda/src/split'
 import join from 'ramda/src/join'
+import './post.scss'
 
 const withDropCase = html => {
   let space = ' ', divider = split(space), spaced = join(space), chunks = divider(html);
@@ -34,6 +36,7 @@ const Post = ({ data, pageContext })=> {
             <span>{created}</span>
             <span> — </span>
             <span>{readingTime.text}</span>
+            <PostSharer/>
           </div>
           <div className="post-date">
             <span>New Update Added On</span>
@@ -46,7 +49,7 @@ const Post = ({ data, pageContext })=> {
           />
         </div>
       </div>
-      <ReadMore posts={pageContext} />
+      <ReadMore posts={pageContext} tags={tags} />
       <Footer />
     </Fragment>
   )

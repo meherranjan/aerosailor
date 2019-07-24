@@ -7,12 +7,12 @@
 
     a {
       display: block;
-      padding: 50px 15px;
+      padding: 50px 20px;
       background-color: transparent;
       text-decoration: none;
     }
 
-    .related-label {
+    .related-label, .related-additional {
       color: #fff;
       display: block;
       letter-spacing: .26em;
@@ -24,6 +24,12 @@
       text-transform: uppercase;
     }
 
+    .related-additional {
+      font-family: 'zero-regular', sans-serif;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 20px;
+    }
     .related-title {
       color: #fff;
       font-size: 30px;

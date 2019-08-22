@@ -5,7 +5,7 @@ import './footer.scss'
 const Copyright =
   () =>
     <section className='copyright'>
-      <div>© 2015 – 2019 Aerosailor</div>
+      <div>© 2019 Aerosailor</div>
     </section>
 
 const AboutMe =

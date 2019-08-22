@@ -38,11 +38,11 @@ const Post = ({ data, pageContext })=> {
             <span>{readingTime.text}</span>
             <PostSharer/>
           </div>
-          <div className="post-date">
+          {/* <div className="post-date">
             <span>New Update Added On</span>
             <span> — </span>
             <span>{modified}</span>
-          </div>
+          </div> */}
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: htmlWithDropCase }}

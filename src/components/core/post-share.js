@@ -27,7 +27,7 @@ const PostSharer =
         <span className='post-sharer'>
             {
                 sharerList.map((obj, index) =>
-                    <a href={obj.url} target="_blank" rel="noopener noreferrer">
+                    <a key={index} href={obj.url} target="_blank" rel="noopener noreferrer">
                         <img src={obj.icon} alt={obj.alt} />
                     </a>
                 )

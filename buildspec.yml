@@ -12,7 +12,7 @@ phases:
       - 'npm run build'
   post_build:
     commands:
-      - 'aws s3 sync "public/" "s3://<ENTER YOUR BUCKET NAME>" --delete --acl "public-read"
+      - 'aws s3 sync "public/" "http://aerosailor.com.s3-website.ap-south-1.amazonaws.com/" --delete --acl "public-read"
 'artifacts:
   base-directory: public
   files:

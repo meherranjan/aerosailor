@@ -27,6 +27,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-s3`,
 			options: {
+				acl: null,
 				bucketName: 'http://www.aerosailor.com.s3-website.ap-south-1.amazonaws.com'
 			},
 		},

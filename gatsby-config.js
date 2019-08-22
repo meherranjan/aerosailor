@@ -25,11 +25,11 @@ module.exports = {
 	},
 	plugins: [
 		{
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `your-disqus-shortname`
-      }
-    },
+			resolve: `gatsby-plugin-s3`,
+			options: {
+				bucketName: 'my-website-bucket'
+			},
+		},
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

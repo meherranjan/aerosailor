@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Aerosailor",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A blog about JS and everything else",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Meher Ranjan Howji <hmeherranjan@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "classnames": "^2.2.6",
@@ -13,7 +13,6 @@
     "gatsby-plugin-manifest": "^2.0.26",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.11",
-    "gatsby-plugin-s3": "^0.3.2",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.1.5",
     "gatsby-plugin-styled-components": "^3.0.7",
@@ -42,7 +41,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby-plugin-s3 deploy",
+    "deploy": "",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop -- --https",
     "serve": "gatsby serve",

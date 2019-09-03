@@ -14,7 +14,7 @@ const AboutMe =
       <h2>Hello </h2>
       <h5>
         I am Meher.
-        I work with <a className="underscore" href="https://www.credit-suisse.com/">Credit Suisse</a> in Pune, India.
+        I am technologist & AVP at <a className="underscore" href="https://www.credit-suisse.com/">Credit Suisse</a> in Pune, India.
       </h5>
       <h5>
         I build high performance apps using React, Redux, GraphQL & RamdaJS.

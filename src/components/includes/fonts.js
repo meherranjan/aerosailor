@@ -51,6 +51,7 @@ export default createGlobalStyle`
          url(${gblsvg}) format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   @font-face {
     font-family: 'zero-bold';
@@ -62,6 +63,7 @@ export default createGlobalStyle`
          url(${gbosvg}) format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   @font-face {
     font-family: 'zero-book';
@@ -73,6 +75,7 @@ export default createGlobalStyle`
          url(${gboosvg}) format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   @font-face {
     font-family: 'zero-medium';
@@ -84,6 +87,7 @@ export default createGlobalStyle`
          url(${gmesvg}) format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   @font-face {
     font-family: 'zero-regular';
@@ -95,6 +99,7 @@ export default createGlobalStyle`
          url(${gresvg}) format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   @font-face {
     font-family: 'zero-light';
@@ -106,6 +111,7 @@ export default createGlobalStyle`
          url(${glisvg}) format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
   }
   @font-face {
       font-family:"Roboto Mono";
@@ -114,5 +120,6 @@ export default createGlobalStyle`
         url(${rmttf}) format("opentype");
       font-style:normal;
       font-weight:400;
+      font-display: fallback;
   }
 `

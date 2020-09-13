@@ -38,6 +38,10 @@ import rmttf from '../../../static/fonts/rm.ttf';
 import rmwoff from '../../../static/fonts/rm.woff';
 import rmwoff2 from '../../../static/fonts/rm.woff2';
 
+import playfairBoldTtf from '../../../static/fonts/playfair/PlayfairDisplay-Bold.ttf';
+import playfairBoldWoff from '../../../static/fonts/playfair/PlayfairDisplay-Bold.woff';
+import playfairBoldWoff2 from '../../../static/fonts/playfair/PlayfairDisplay-Bold.woff2';
+
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
@@ -118,6 +122,15 @@ export default createGlobalStyle`
       src:url(${rmwoff2}) format("woff2"),
         url(${rmwoff}) format("woff"),
         url(${rmttf}) format("opentype");
+      font-style:normal;
+      font-weight:400;
+      font-display: fallback;
+  }
+  @font-face {
+      font-family:"Playfair Bold";
+      src:url(${playfairBoldWoff2}) format("woff2"),
+        url(${playfairBoldWoff}) format("woff"),
+        url(${playfairBoldTtf}) format("truetype");
       font-style:normal;
       font-weight:400;
       font-display: fallback;

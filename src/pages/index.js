@@ -4,6 +4,7 @@ import SEO from "../components/includes/seo"
 import Header from "../components/includes/header/header"
 import Footer from "../components/includes/footer/footer"
 import GlobalStyles from "../components/includes/fonts"
+import LandingSection from "../components/core/landing"
 
 const IndexPage =
   () => 
@@ -11,10 +12,8 @@ const IndexPage =
         <GlobalStyles />
         <SEO />
         <Header />
-        <div>
-            I am a main page.
-        </div>
-        <Footer />
+        <LandingSection />
+        {/* <Footer /> */}
       </main>
 
 export default IndexPage

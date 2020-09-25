@@ -4,6 +4,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -188,6 +190,8 @@ html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  height: 100%;
+  width: 100%;
 }
 * {
   box-sizing: inherit;
@@ -199,7 +203,6 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
   font-family: 'zero-regular', Arial, Helvetica, sans-serif;
   font-weight: normal;
   word-wrap: break-word;

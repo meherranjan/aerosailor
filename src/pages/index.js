@@ -5,13 +5,14 @@ import Header from "../components/includes/header/header"
 import Footer from "../components/includes/footer/footer"
 import GlobalStyles from "../components/includes/fonts"
 import LandingSection from "../components/core/landing"
+// import '../components/utils/tagada'
 
 const IndexPage =
   () => 
       <main>
         <GlobalStyles />
         <SEO />
-        <Header />
+        {/* <Header /> */}
         <LandingSection />
         {/* <Footer /> */}
       </main>

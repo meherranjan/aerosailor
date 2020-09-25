@@ -42,6 +42,10 @@ import playfairBoldTtf from '../../../static/fonts/playfair/PlayfairDisplay-Bold
 import playfairBoldWoff from '../../../static/fonts/playfair/PlayfairDisplay-Bold.woff';
 import playfairBoldWoff2 from '../../../static/fonts/playfair/PlayfairDisplay-Bold.woff2';
 
+import playfairTtf from '../../../static/fonts/playfair/PlayfairDisplay-Regular.ttf';
+import playfairWoff from '../../../static/fonts/playfair/PlayfairDisplay-Regular.woff';
+import playfairWoff2 from '../../../static/fonts/playfair/PlayfairDisplay-Regular.woff2';
+
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
@@ -131,6 +135,15 @@ export default createGlobalStyle`
       src:url(${playfairBoldWoff2}) format("woff2"),
         url(${playfairBoldWoff}) format("woff"),
         url(${playfairBoldTtf}) format("truetype");
+      font-style:normal;
+      font-weight:400;
+      font-display: fallback;
+  }
+  @font-face {
+      font-family:"Playfair Regular";
+      src:url(${playfairWoff2}) format("woff2"),
+        url(${playfairWoff}) format("woff"),
+        url(${playfairTtf}) format("truetype");
       font-style:normal;
       font-weight:400;
       font-display: fallback;

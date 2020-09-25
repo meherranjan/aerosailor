@@ -1,0 +1,28 @@
+
+  div#page-content {
+    position: relative;
+    width: 80%;
+    max-width: 1480px;
+    margin: 0 auto;
+    h2.brand {
+      font-family: 'zero-bold', sans-serif !important;
+      font-size: 96px;
+      line-height: 116.496px;
+      color: #fff;
+    }
+    h3 {
+      font-family: 'zero-light', sans-serif !important;
+      letter-spacing: 0.3px;
+      line-height: 42px;
+      font-size: 30px;
+      color: #fff;
+    }
+    .background-webgl {
+      position: fixed;
+      left:0;
+      top:0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }

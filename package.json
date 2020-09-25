@@ -29,7 +29,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "three": "^0.120.1",
+    "vanta": "^0.5.19"
   },
   "devDependencies": {
     "npm-check": "^5.9.2",

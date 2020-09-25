@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
-import PreLoader from "./preloader/preloader"
+import PreLoader from "../preloader/preloader"
 import * as THREE from "three"
-import CLOUDS from "vanta/src/vanta.clouds.js"
+import CLOUDS from "./clouds/vanta.clouds"
 import "./landing.scss"
 
 const LandingSection = () => {

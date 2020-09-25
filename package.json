@@ -1,27 +1,27 @@
 {
   "name": "Aerosailor",
   "private": true,
-  "description": "A blog about JS and everything else",
-  "version": "0.1.0",
+  "description": "A blog by Meher Ranjan. JavaScript, Music, Fitness and everything else under the sun.",
+  "version": "0.2.0",
   "author": "Meher Ranjan Howji <hmeherranjan@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "classnames": "^2.2.6",
     "foundation-sites": "^6.6.3",
-    "gatsby": "^2.24.55",
-    "gatsby-image": "^2.4.17",
-    "gatsby-plugin-manifest": "^2.4.28",
-    "gatsby-plugin-offline": "^3.2.27",
-    "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-plugin-sass": "^2.3.12",
-    "gatsby-plugin-sharp": "^2.6.33",
-    "gatsby-plugin-styled-components": "^3.3.10",
-    "gatsby-remark-images": "^3.3.29",
-    "gatsby-remark-prismjs": "^3.5.11",
+    "gatsby": "^2.24.65",
+    "gatsby-image": "^2.4.19",
+    "gatsby-plugin-manifest": "^2.4.31",
+    "gatsby-plugin-offline": "^3.2.28",
+    "gatsby-plugin-react-helmet": "^3.3.11",
+    "gatsby-plugin-sass": "^2.3.13",
+    "gatsby-plugin-sharp": "^2.6.36",
+    "gatsby-plugin-styled-components": "^3.3.11",
+    "gatsby-remark-images": "^3.3.30",
+    "gatsby-remark-prismjs": "^3.5.13",
     "gatsby-remark-reading-time": "^1.1.0",
-    "gatsby-source-filesystem": "^2.3.28",
-    "gatsby-transformer-remark": "^2.8.34",
-    "gatsby-transformer-sharp": "^2.5.14",
+    "gatsby-source-filesystem": "^2.3.30",
+    "gatsby-transformer-remark": "^2.8.35",
+    "gatsby-transformer-sharp": "^2.5.15",
     "node-sass": "^4.14.1",
     "prismjs": "^1.21.0",
     "prop-types": "^15.7.2",
@@ -30,12 +30,11 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.2.0",
-    "three": "^0.120.1",
-    "vanta": "^0.5.19"
+    "three": "^0.120.1"
   },
   "devDependencies": {
     "npm-check": "^5.9.2",
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.2"
   },
   "keywords": [
     "gatsby"

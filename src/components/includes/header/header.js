@@ -117,15 +117,6 @@ const Header = () => {
             </li>
             <li className="menu-item">
               <a
-                href="journal.html"
-                data-hover="Tips"
-                className={cn({ "menu-item-comes": menuItems })}
-              >
-                Tips
-              </a>
-            </li>
-            <li className="menu-item">
-              <a
                 href="contact.html"
                 data-hover="Contact"
                 className={cn({ "menu-item-comes": menuItems })}

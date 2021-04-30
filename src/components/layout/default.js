@@ -23,13 +23,11 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
-      <div className='pure-c'>
+    render={(data) => (
+      <div className="pure-c">
         <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
-          <footer>
-            Comoing soon
-          </footer>
+        <main>{children}</main>
+        <footer>Coming soon</footer>
       </div>
     )}
   />

@@ -1,28 +1,73 @@
+div#page-content {
+  position: relative;
+  width: 80%;
+  max-width: 1480px;
+  margin: 0 auto;
+  h2.brand {
+    text-align: center;
+    font-family: "zero-bold", sans-serif !important;
+    font-size: 108px;
+    font-style: italic;
+    line-height: 117px;
+    color: #fff;
+  }
+  h3 {
+    font-family: "zero-light", sans-serif !important;
+    letter-spacing: 0.3px;
+    line-height: 42px;
+    font-size: 32px;
+    color: #fff;
+  }
+  .background-webgl {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 
-  div#page-content {
-    position: relative;
-    width: 80%;
-    max-width: 1480px;
-    margin: 0 auto;
-    h2.brand {
-      font-family: 'zero-bold', sans-serif !important;
-      font-size: 96px;
-      line-height: 116.496px;
-      color: #fff;
-    }
-    h3 {
-      font-family: 'zero-light', sans-serif !important;
-      letter-spacing: 0.3px;
-      line-height: 42px;
-      font-size: 30px;
-      color: #fff;
-    }
-    .background-webgl {
-      position: fixed;
-      left:0;
-      top:0;
-      height: 100%;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      min-height: 100%;
+      z-index: 9999;
       width: 100%;
-      z-index: -1;
+      height: 100%;
+      background: linear-gradient(#fff, #fff) calc(1 * 100% / 6),
+        linear-gradient(#fff, #fff) calc(2 * 100% / 6),
+        linear-gradient(#fff, #fff) calc(3 * 100% / 6);
+      // linear-gradient(#fff, #fff) calc(4 * 100% / 6),
+      // linear-gradient(#fff, #fff) calc(5 * 100% / 6);
+      background-size: 1px 100%; /* Control the width here*/
+      background-repeat: no-repeat;
+      opacity: 0.1;
     }
   }
+}
+
+.lines {
+  position: relative;
+  .line {
+    display: block;
+    width: 1px;
+    height: 0;
+    position: fixed;
+    background: hsla(0, 0%, 48.6%, 0.2);
+    z-index: -1;
+    top: 0;
+    pointer-events: none;
+  }
+  .line-1 {
+    left: 25%;
+  }
+  .line-2 {
+    left: 50%;
+    bottom: 0;
+    top: unset;
+  }
+  .line-3 {
+    left: 75%;
+  }
+}

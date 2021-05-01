@@ -135,6 +135,7 @@
   display: block;
   padding-left: 40px;
   padding-bottom: 35px;
+  margin-bottom: 0;
 }
 
 .menu a {
@@ -150,7 +151,7 @@
   -o-transition: all 0.5s;
   transition: all 0.5s;
   display: inline-block;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   opacity: 0;
   color: #575757;
   -webkit-transform: translateX(-120%);
@@ -461,7 +462,12 @@
   margin-bottom: 60px;
 }
 
+.widget-socials  {
+    margin-left: 0;
+}
+
 .widget-socials li {
+  margin-bottom: 5px;
   font-family: "zero-book";
   font-size: 20px;
   line-height: 45px;

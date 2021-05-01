@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import "./header.scss"
 import cn from "classnames"
 import logo from "../../../../static/icons/icon-512x512.png"
+import logoDar from "../../../../static/icons/icon-512x512-invert.png"
 
 const Header = () => {
   const [defaultMenuHover, setDefaultMenuHover] = useState([true])
@@ -37,6 +38,7 @@ const Header = () => {
     >
       <div className="site-branding">
         <img className="light-logo logo-in" src={logo} alt="Site Light Logo" />
+        <img className="dark-logo logo-in" src={logoDark} alt="Site Light Logo" />
       </div>
 
       <div className={cn("site-navigation light", { "nav-open": onMenuClick })}>
@@ -148,16 +150,16 @@ const Header = () => {
           <div className="menu-widget">
             <ul className="widget-socials">
               <li className={cn({ "so-li-in": socialItems })}>
-                <a href="#">behance.</a>
+                <a href="#">udemy.</a>
               </li>
               <li className={cn({ "so-li-in": socialItems })}>
-                <a href="#">twitter.</a>
-              </li>
-              <li className={cn({ "so-li-in": socialItems })}>
-                <a href="#">dribble.</a>
+                <a href="#">youtube.</a>
               </li>
               <li className={cn({ "so-li-in": socialItems })}>
                 <a href="#">instagram.</a>
+              </li>
+              <li className={cn({ "so-li-in": socialItems })}>
+                <a href="#">twitter.</a>
               </li>
             </ul>
           </div>

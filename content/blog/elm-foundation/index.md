@@ -25,11 +25,11 @@ Grid XY in HTML / CSS
 
 ```html
 <div class="container fluid">
-    <div class="grid-x margin-x">
-        <div class="cell">
-            <!-- Hello Elm! -->
-        </div>
+  <div class="grid-x margin-x">
+    <div class="cell">
+      <!-- Hello Elm! -->
     </div>
+  </div>
 </div>
 ```
 

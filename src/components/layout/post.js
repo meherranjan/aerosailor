@@ -14,72 +14,72 @@ import join from 'ramda/src/join'
 import './post.scss'
 
 const withDropCase = (html) => {
-    const space = ' '
-    const divider = split(space)
-    const spaced = join(space)
-    const chunks = divider(html)
-    chunks[0] = `<p><span class='post-drop-case'>${chunks[0][3]}</span>`
-    return spaced(chunks)
+  const space = ' '
+  const divider = split(space)
+  const spaced = join(space)
+  const chunks = divider(html)
+  chunks[0] = `<p><span class='post-drop-case'>${chunks[0][3]}</span>`
+  return spaced(chunks)
 }
 
 const Post = ({ data, pageContext }) => {
-    const {
-        fields: { readingTime },
-        frontmatter: { created, modified, title, tags },
-        html,
-    } = data.markdownRemark
-    const htmlWithDropCase = withDropCase(html)
-    return (
-        <>
-            <GlobalStyles />
-            <SEO />
-            <Header />
-            <div className="blog-post-container">
-                {/* <PostSEO {...markdownRemark} /> */}
-                <PostTags list={tags} />
-                <div className="blog-post">
-                    <h1 className="post-title">{title}</h1>
-                    <div className="post-date">
-                        <span>{created}</span>
-                        <span> — </span>
-                        <span>{readingTime.text}</span>
-                        <PostSharer />
-                    </div>
-                    {/* <div className="post-date">
+  const {
+    fields: { readingTime },
+    frontmatter: { created, modified, title, tags },
+    html,
+  } = data.markdownRemark
+  const htmlWithDropCase = withDropCase(html)
+  return (
+    <>
+      <GlobalStyles />
+      <SEO />
+      <Header />
+      <div className="blog-post-container">
+        {/* <PostSEO {...markdownRemark} /> */}
+        <PostTags list={tags} />
+        <div className="blog-post">
+          <h1 className="post-title">{title}</h1>
+          <div className="post-date">
+            <span>{created}</span>
+            <span> — </span>
+            <span>{readingTime.text}</span>
+            <PostSharer />
+          </div>
+          {/* <div className="post-date">
             <span>New Update Added On</span>
             <span> — </span>
             <span>{modified}</span>
           </div> */}
-                    <div
-                        className="blog-post-content"
-                        dangerouslySetInnerHTML={{ __html: htmlWithDropCase }}
-                    />
-                </div>
-            </div>
-            <ReadMore posts={pageContext} tags={tags} />
-            <Footer />
-        </>
-    )
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: htmlWithDropCase }}
+          />
+        </div>
+      </div>
+      <ReadMore posts={pageContext} tags={tags} />
+      <Footer />
+    </>
+  )
 }
 
 export const pageQuery = graphql`
-    query($slug: String!) {
-        markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
-            frontmatter {
-                created(formatString: "MMMM DD, YYYY")
-                modified(formatString: "MMMM DD, YYYY")
-                path
-                title
-                tags
-            }
-            fields {
-                readingTime {
-                    text
-                }
-            }
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        created(formatString: "MMMM DD, YYYY")
+        modified(formatString: "MMMM DD, YYYY")
+        path
+        title
+        tags
+      }
+      fields {
+        readingTime {
+          text
         }
+      }
     }
+  }
 `
 
 export default Post

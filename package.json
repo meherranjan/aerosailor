@@ -2,7 +2,7 @@
   "name": "Aerosailor",
   "private": true,
   "description": "A blog by Meher Ranjan. JavaScript, Music, Fitness and everything under the sun.",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "author": "Meher Ranjan Howji <hmeherranjan@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -58,5 +58,18 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "eslintConfig": {
+    "rules": {
+      "prefer-const": "off",
+      "no-var": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "es5"
   }
 }

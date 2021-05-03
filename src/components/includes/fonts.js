@@ -1,31 +1,31 @@
-import gblwoff from "../../../static/fonts/gbl.woff"
-import gblwoff2 from "../../../static/fonts/gbl.woff2"
+import gblwoff from '../../../static/fonts/gbl.woff'
+import gblwoff2 from '../../../static/fonts/gbl.woff2'
 
-import gbowoff from "../../../static/fonts/gbo.woff"
-import gbowoff2 from "../../../static/fonts/gbo.woff2"
+import gbowoff from '../../../static/fonts/gbo.woff'
+import gbowoff2 from '../../../static/fonts/gbo.woff2'
 
-import gboowoff from "../../../static/fonts/gboo.woff"
-import gboowoff2 from "../../../static/fonts/gboo.woff2"
+import gboowoff from '../../../static/fonts/gboo.woff'
+import gboowoff2 from '../../../static/fonts/gboo.woff2'
 
-import gmewoff from "../../../static/fonts/gme.woff"
-import gmewoff2 from "../../../static/fonts/gme.woff2"
+import gmewoff from '../../../static/fonts/gme.woff'
+import gmewoff2 from '../../../static/fonts/gme.woff2'
 
-import grewoff from "../../../static/fonts/gre.woff"
-import grewoff2 from "../../../static/fonts/gre.woff2"
+import grewoff from '../../../static/fonts/gre.woff'
+import grewoff2 from '../../../static/fonts/gre.woff2'
 
-import gliwoff from "../../../static/fonts/gli.woff"
-import gliwoff2 from "../../../static/fonts/gli.woff2"
+import gliwoff from '../../../static/fonts/gli.woff'
+import gliwoff2 from '../../../static/fonts/gli.woff2'
 
-import rmwoff from "../../../static/fonts/rm.woff"
-import rmwoff2 from "../../../static/fonts/rm.woff2"
+import rmwoff from '../../../static/fonts/rm.woff'
+import rmwoff2 from '../../../static/fonts/rm.woff2'
 
-import playfairBoldWoff from "../../../static/fonts/playfair/PlayfairDisplay-Bold.woff"
-import playfairBoldWoff2 from "../../../static/fonts/playfair/PlayfairDisplay-Bold.woff2"
+import playfairBoldWoff from '../../../static/fonts/playfair/PlayfairDisplay-Bold.woff'
+import playfairBoldWoff2 from '../../../static/fonts/playfair/PlayfairDisplay-Bold.woff2'
 
-import playfairWoff from "../../../static/fonts/playfair/PlayfairDisplay-Regular.woff"
-import playfairWoff2 from "../../../static/fonts/playfair/PlayfairDisplay-Regular.woff2"
+import playfairWoff from '../../../static/fonts/playfair/PlayfairDisplay-Regular.woff'
+import playfairWoff2 from '../../../static/fonts/playfair/PlayfairDisplay-Regular.woff2'
 
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
   @font-face {

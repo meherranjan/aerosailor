@@ -4,8 +4,9 @@ path: '/blog/coding-a-neuron-in-javascript'
 created: '2015-05-28T22:40:32.169Z'
 modified: '2015-05-29T22:40:32.169Z'
 thumbnail: './featured-image.jpg'
-tags: ["artificial intelligence", "machine learning", "neuron"]
+tags: ['artificial intelligence', 'machine learning', 'neuron']
 ---
+
 A Neuron or Perceptron is a simplified mathematical model of a biological neuron. The perceptron algorithm was invented in 1957 at the Cornell Aeronautical Laboratory by Frank Rosenblatt. Initially and strangely it was intended to be a machine, rather than a program. It was reckoned to be used for image recognition.
 
 We have myriads of libraries in our toolkit, some popular ones like TensorFlow — SciKit, that we practically would never want to worry about how the fundamental unit of a neural network works.
@@ -25,4 +26,3 @@ Let’s say I ask you how many kilograms make a pound? I am sure you know the an
 For a moment, let’s forget that we know the magical figure and act like we are 5. So what’s your guess? 1.8? Okay.. we have to start somewhere and 1.8 is good enough start.
 
 Okay, before proceeding, we should also remind ourselves that the relationship between kilogram and pounds is linear. That means if we double the kilogram or half it, the same effect is proportional in pounds. And, can we agree upon a relationship, which can be expressed as…
-

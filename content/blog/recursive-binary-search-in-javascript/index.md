@@ -23,16 +23,16 @@ Let's say you have a navigation structure that goes several level deep. It becom
 
 _Here what a loop would look like:_
 
--   Look through the JSON list (array of objects containing links)
--   If it contains a link then push that item to the end of your list to traverse later
--   If you reach end of your list, you are ready to rock!
--   Repeat
+- Look through the JSON list (array of objects containing links)
+- If it contains a link then push that item to the end of your list to traverse later
+- If you reach end of your list, you are ready to rock!
+- Repeat
 
 _Recursive Approach:_
 
--   Look through the JSON list (array of objects containing links)
--   If you find a link, go to step #1
--   If you find no link, you are ready to roll.
+- Look through the JSON list (array of objects containing links)
+- If you find a link, go to step #1
+- If you find no link, you are ready to roll.
 
 I realize I have extremely simplified the example to get a point across. Although the difference might not seem huge to many if you are new to recursion but shortly I will unfold a layer of some awesome code to help to sail through this beautiful pattern of navigation. Code ahead, careful fellas..
 
@@ -43,22 +43,22 @@ Time Complexity - O(log n)
 const sortedList = [1, 2, 3, 4, 5, 6, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 const binarySearch = (list, item) => {
-    let low = 0
-    let high = list.length - 1
-    let guess = null
+  let low = 0
+  let high = list.length - 1
+  let guess = null
 
-    while (low <= high) {
-        let mid = Math.floor((high + low) / 2)
-        guess = list[mid]
+  while (low <= high) {
+    let mid = Math.floor((high + low) / 2)
+    guess = list[mid]
 
-        if (guess === item) {
-            console.log('The item is present at ' + (mid + 1) + ' position.')
-        } else if (guess > item) {
-            high = mid - 1
-        } else {
-            low = mid + 1
-        }
+    if (guess === item) {
+      console.log('The item is present at ' + (mid + 1) + ' position.')
+    } else if (guess > item) {
+      high = mid - 1
+    } else {
+      low = mid + 1
     }
+  }
 }
 
 binarySearch(sortedList, 6)
@@ -71,26 +71,26 @@ Let's see how a recursive binary search would look like:
 sortedList = [11, 24, 33, 64, 95, 106, 217, 228, 299, 310]
 
 const getMid = (low, high) => {
-    return Math.floor((high + low) / 2)
+  return Math.floor((high + low) / 2)
 }
 
 const recursiveBS = (list, item, low, high) => {
-    !low && !high && ((low = 0), (high = list.length - 1))
+  !low && !high && ((low = 0), (high = list.length - 1))
 
-    let found = false
+  let found = false
 
-    if (low <= high) {
-        let mid = getMid(low, high),
-            guess = list[mid]
+  if (low <= high) {
+    let mid = getMid(low, high),
+      guess = list[mid]
 
-        if (guess === item) {
-            console.log('Your item is at ' + (getMid(low, high) + 1) + ' position')
-        } else if (guess > item) {
-            recursiveBS(list, item, low, mid - 1)
-        } else {
-            recursiveBS(list, item, mid + 1, high)
-        }
+    if (guess === item) {
+      console.log('Your item is at ' + (getMid(low, high) + 1) + ' position')
+    } else if (guess > item) {
+      recursiveBS(list, item, low, mid - 1)
+    } else {
+      recursiveBS(list, item, mid + 1, high)
     }
+  }
 }
 
 recursiveBS(sortedList, 217)

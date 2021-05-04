@@ -3,8 +3,6 @@ import './header.scss'
 import cn from 'classnames'
 import lightLogo from '../../../../static/icons/icon-512x512.png'
 import darkLogo from '../../../../static/icons/icon-512x512-invert.png'
-import { gs } from './util.js'
-import Footer from '../footer/footer'
 
 const Header = () => {
   const [defaultMenuHover, setDefaultMenuHover] = useState([true])
@@ -166,63 +164,7 @@ const Header = () => {
         </div>
       </header>
 
-      <div id="main" className="content loaded">
-      <div id="page-content" class="page-content">
-        <div className="section">
-          <div className="wrapper-small">
-            <div className="c-col-12">
-              <div className="text-wrapper">
-                <h1 className="big-title has-animation skew-up is-inview" data-scroll="true">
-                  Hello!
-                  <br />
-                  I am 
-                  Meher.
-                </h1>
-              </div>
-            </div>
-            <div className="c-col-4 hide-mobile"></div>
-            <div className="c-col-8">
-              <div className="text-wrapper">
-                <p
-                  data-delay="0.4"
-                  className="big-p has-animation lines-up is-inview"
-                  data-scroll="true"
-                  style={gs('transition-delay: 0.4s;')}
-                >
-                  <div style={gs('line-index:0;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.4s;')}>
-                      This vendor is incompetent product launch yet waste of
-                    </span>
-                  </div>
-                  <div style={gs('line-index:1;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.533333s;')}>
-                      resources message the initiative diversify kpis high touch client.
-                    </span>
-                  </div>
-                  <div style={gs('line-index:2;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.666667s;')}>
-                      Herding cats commitment to the cause yet i also believe it's
-                    </span>
-                  </div>
-                  <div style={gs('line-index:3;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.8s;')}>
-                      important for every member to be involved and invested in our
-                    </span>
-                  </div>
-                  <div style={gs('line-index:4;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.933333s;')}>
-                      company..
-                    </span>
-                  </div>
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <Footer />
-      </div>
+     
     </div>
   )
 }

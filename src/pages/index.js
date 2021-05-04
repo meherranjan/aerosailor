@@ -41,7 +41,6 @@ const IndexPage = () => (
       <Footer />
     </div>
     {/* <LandingSection /> */}
-    {/* <Footer /> */}
   </main>
 )
 

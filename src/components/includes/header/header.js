@@ -5,7 +5,6 @@ import lightLogo from '../../../../static/icons/icon-512x512.png'
 import darkLogo from '../../../../static/icons/icon-512x512-invert.png'
 
 const Header = () => {
-  const [defaultMenuHover, setDefaultMenuHover] = useState([true])
   const [onMenuClick, toggleMenuClick] = useState(false)
   const [siteNavigation, toggleSiteNavigation] = useState(false)
   const [menuItems, toggleMenuItems] = useState(true)
@@ -76,52 +75,28 @@ const Header = () => {
             style={onMenuClick ? { visibility: 'hidden' } : { visibility: 'visible' }}
           >
             <ul className="menu">
-              <li
-                className={cn('menu-item has-children menu-item-active', {
-                  'menu-item-hover': defaultMenuHover,
-                })}
-              >
-                <a
-                  href="index.html"
-                  data-hover="Home"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+              <li className={'menu-item has-children menu-item-active'}>
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Home
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="works.html"
-                  data-hover="Courses"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Courses
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="about.html"
-                  data-hover="About"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   About
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="journal.html"
-                  data-hover="Blog"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Blog
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="contact.html"
-                  data-hover="Contact"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Contact
                 </a>
               </li>
@@ -150,21 +125,19 @@ const Header = () => {
                   <a href="#">udemy.</a>
                 </li>
                 <li className={cn({ 'so-li-in': socialItems })}>
-                  <a href="#">youtube.</a>
-                </li>
-                <li className={cn({ 'so-li-in': socialItems })}>
                   <a href="#">instagram.</a>
                 </li>
                 <li className={cn({ 'so-li-in': socialItems })}>
                   <a href="#">twitter.</a>
+                </li>
+                <li className={cn({ 'so-li-in': socialItems })}>
+                  <a href="#">linkedin.</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </header>
-
-     
     </div>
   )
 }

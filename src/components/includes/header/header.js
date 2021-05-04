@@ -3,11 +3,8 @@ import './header.scss'
 import cn from 'classnames'
 import lightLogo from '../../../../static/icons/icon-512x512.png'
 import darkLogo from '../../../../static/icons/icon-512x512-invert.png'
-import { gs } from './util.js'
-import Footer from '../footer/footer'
 
 const Header = () => {
-  const [defaultMenuHover, setDefaultMenuHover] = useState([true])
   const [onMenuClick, toggleMenuClick] = useState(false)
   const [siteNavigation, toggleSiteNavigation] = useState(false)
   const [menuItems, toggleMenuItems] = useState(true)
@@ -78,56 +75,33 @@ const Header = () => {
             style={onMenuClick ? { visibility: 'hidden' } : { visibility: 'visible' }}
           >
             <ul className="menu">
-              <li
-                className={cn('menu-item has-children menu-item-active', {
-                  'menu-item-hover': defaultMenuHover,
-                })}
-              >
-                <a
-                  href="index.html"
-                  data-hover="Home"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+              <li className={'menu-item has-children menu-item-active'}>
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Home
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="works.html"
-                  data-hover="Courses"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Courses
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="about.html"
-                  data-hover="About"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   About
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="journal.html"
-                  data-hover="Blog"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Blog
                 </a>
               </li>
               <li className="menu-item">
-                <a
-                  href="contact.html"
-                  data-hover="Contact"
-                  className={cn({ 'menu-item-comes': menuItems })}
-                >
+                <a href="#" className={cn({ 'menu-item-comes': menuItems })}>
                   Contact
                 </a>
               </li>
             </ul>
+
           </div>
 
           <div className={cn('menu-widget-wrapper mww-2', { 'mww-in': socialItems })}>
@@ -152,13 +126,13 @@ const Header = () => {
                   <a href="#">udemy.</a>
                 </li>
                 <li className={cn({ 'so-li-in': socialItems })}>
-                  <a href="#">youtube.</a>
-                </li>
-                <li className={cn({ 'so-li-in': socialItems })}>
                   <a href="#">instagram.</a>
                 </li>
                 <li className={cn({ 'so-li-in': socialItems })}>
                   <a href="#">twitter.</a>
+                </li>
+                <li className={cn({ 'so-li-in': socialItems })}>
+                  <a href="#">linkedin.</a>
                 </li>
               </ul>
             </div>
@@ -166,63 +140,6 @@ const Header = () => {
         </div>
       </header>
 
-      <div id="main" className="content loaded">
-      <div id="page-content" class="page-content">
-        <div className="section">
-          <div className="wrapper-small">
-            <div className="c-col-12">
-              <div className="text-wrapper">
-                <h1 className="big-title has-animation skew-up is-inview" data-scroll="true">
-                  Hello!
-                  <br />
-                  I am 
-                  Meher.
-                </h1>
-              </div>
-            </div>
-            <div className="c-col-4 hide-mobile"></div>
-            <div className="c-col-8">
-              <div className="text-wrapper">
-                <p
-                  data-delay="0.4"
-                  className="big-p has-animation lines-up is-inview"
-                  data-scroll="true"
-                  style={gs('transition-delay: 0.4s;')}
-                >
-                  <div style={gs('line-index:0;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.4s;')}>
-                      This vendor is incompetent product launch yet waste of
-                    </span>
-                  </div>
-                  <div style={gs('line-index:1;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.533333s;')}>
-                      resources message the initiative diversify kpis high touch client.
-                    </span>
-                  </div>
-                  <div style={gs('line-index:2;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.666667s;')}>
-                      Herding cats commitment to the cause yet i also believe it's
-                    </span>
-                  </div>
-                  <div style={gs('line-index:3;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.8s;')}>
-                      important for every member to be involved and invested in our
-                    </span>
-                  </div>
-                  <div style={gs('line-index:4;')}>
-                    <span className="split-line" style={gs('transition-delay: 0.933333s;')}>
-                      company..
-                    </span>
-                  </div>
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <Footer />
-      </div>
     </div>
   )
 }

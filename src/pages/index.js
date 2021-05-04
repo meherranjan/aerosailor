@@ -7,7 +7,7 @@ import GlobalStyles from '../components/includes/fonts'
 import LandingSection from '../components/core/landing/landing'
 
 const IndexPage = () => (
-  <main>
+  <main className="layout-dark">
     <GlobalStyles />
     <SEO />
     <div className="lines">

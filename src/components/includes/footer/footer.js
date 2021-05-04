@@ -2,53 +2,83 @@ import React from 'react'
 import socialList from './social'
 import './footer.scss'
 
-const Copyright = () => (
-  <section className="copyright">
-    <div>© 2019 Aerosailor</div>
-  </section>
-)
-
-const AboutMe = () => (
-  <section className="about-me">
-    <h2>Hello </h2>
-    <h5>
-      I am Meher. I am technologist & AVP at{' '}
-      <a className="underscore" href="https://www.credit-suisse.com/">
-        Credit Suisse
-      </a>{' '}
-      in Pune, India.
-    </h5>
-    <h5>I build high performance apps using React, Redux, GraphQL & RamdaJS.</h5>
-  </section>
-)
-
-const ConnectOnSocial = () => (
-  <section className="connect-on-social">
-    <h5>
-      <span role="img" aria-label="waving hand">
-        👋
-      </span>
-    </h5>
-    <a className="underscore" href="mailto:hmeherranjan@gmail.com">
-      hello@aerosailor.com
-    </a>
-    <ul className="clearfix">
-      {socialList.map((obj, index) => (
-        <li key={index}>
-          <a href={obj.url} target="_blank" rel="noopener noreferrer">
-            <img src={obj.icon} alt={obj.alt} />
-          </a>
-        </li>
-      ))}
-    </ul>
-  </section>
-)
-
 const Footer = () => (
-  <footer className="footer-container">
-    <AboutMe />
-    <ConnectOnSocial />
-    <Copyright />
+  <footer className="site-footer layout-dark">
+    <span className="footer-ov"></span>
+    <span className="footer-ov"></span>
+    <span className="footer-ov"></span>
+    <span className="footer-ov"></span>
+
+    <div className="wrapper">
+      <div className="c-col-12">
+        <h1 className="thin">
+          Do you have a project or an idea?
+          <br />
+          <a className="underline" href="#">
+          hello@aerosailor.com 
+          </a>
+        </h1>
+      </div>
+    </div>
+
+    <div className="wrapper-full">
+      <div className="c-col-6 hide-mobile"></div>
+
+      <div className="c-col-3 no-gap">
+        {/* <div className="caption">PROFILE PICTURE</div> */}
+        {/* <h5>
+          32 Avenue of the Americas
+          <br />
+          New York, NY 10013
+          <br />
+          United States
+        </h5> */}
+      </div>
+
+      <div className="c-col-3 no-gap">
+        <div className="caption">FOLLOW</div>
+
+        <ul className="footer-list">
+          <li>
+            <a href="#" className="underline">
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#" className="underline">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="#" className="underline">
+              Udemy
+            </a>
+          </li>
+          <li>
+            <a href="#" className="underline">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="wrapper">
+      <div className="c-col-6">
+        <ul className="footer-menu ">
+          <li>
+            <a href="#">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="c-col-6 align-right">
+        <p className="copyright-text">Aerosailor® 2021 ©</p>
+      </div>
+    </div>
   </footer>
 )
 

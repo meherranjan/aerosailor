@@ -2,7 +2,7 @@ import React from 'react'
 
 import SEO from '../components/includes/seo'
 import Header from '../components/includes/header/header'
-import Footer from "../components/includes/footer/footer"
+import Footer from '../components/includes/footer/footer'
 import GlobalStyles from '../components/includes/fonts'
 import LandingSection from '../components/core/landing/landing'
 

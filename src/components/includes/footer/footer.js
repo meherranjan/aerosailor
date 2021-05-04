@@ -15,7 +15,7 @@ const Footer = () => (
           Do you have a project or an idea?
           <br />
           <a className="underline" href="#">
-          hello@aerosailor.com 
+            hello@aerosailor.com
           </a>
         </h1>
       </div>

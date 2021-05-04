@@ -3,6 +3,8 @@ import './header.scss'
 import cn from 'classnames'
 import lightLogo from '../../../../static/icons/icon-512x512.png'
 import darkLogo from '../../../../static/icons/icon-512x512-invert.png'
+import { gs } from './util.js'
+import Footer from '../footer/footer'
 
 const Header = () => {
   const [defaultMenuHover, setDefaultMenuHover] = useState([true])
@@ -11,6 +13,7 @@ const Header = () => {
   const [menuItems, toggleMenuItems] = useState(true)
   const [socialItems, toggleSocialItems] = useState(true)
   const [lightNav, toggleLightNav] = useState(false)
+  const [mainClass, setMainClass] = useState('')
 
   useEffect(() => {
     if (onMenuClick === true) {
@@ -35,6 +38,12 @@ const Header = () => {
       toggleSocialItems(false)
     }
   }, [onMenuClick])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMainClass('loaded')
+    }, 100)
+  }, [])
 
   return (
     <div>
@@ -158,544 +167,61 @@ const Header = () => {
       </header>
 
       <div id="main" className="content loaded">
-        <div
-          className="page-settings"
-          data-layout="light"
-          data-header-style="dark"
-          data-menu-layout="dark"
-        ></div>
-
-        <div id="page-content" className="page-content">
-          <div className="section">
-            <div className="wrapper-small">
-              <div className="c-col-12">
-                <div className="text-wrapper">
-                  <div className="caption has-animation skew-up">ABOUT THE AGENCY</div>
-                  <h1 className="big-title has-animation skew-up">
-                    Hello! We are <br />
-                    Pe Themes.
-                  </h1>
-                </div>
-              </div>
-
-              <div className="c-col-4 hide-mobile"></div>
-
-              <div className="c-col-8">
-                <div className="text-wrapper">
-                  <p data-delay="0.4" className="big-p has-animation lines-up">
-                    {' '}
-                    This vendor is incompetent product launch yet waste of resources message the
-                    initiative diversify kpis high touch client. Herding cats commitment to the
-                    cause yet i also believe it's important for every member to be involved and
-                    invested in our company..
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section">
-            <div className="wrapper">
-              <div className="c-col-12 has-animation fade-in-up">
-                <div className="pe-embed-video">
-                  <div
-                    className="pe-video"
-                    data-plyr-provider="youtube"
-                    data-plyr-embed-id="LcSevy6HUQc"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section">
-            <div className="wrapper-small">
-              <div className="c-col-6">
-                <div className="text-wrapper">
-                  <div data-delay="0.5" className="caption has-animation skew-up">
-                    OUR SERVICES
-                  </div>
-                  <h1 className="big-title has-animation skew-up">What we create?</h1>
-                </div>
-              </div>
-
-              <div className="c-col-6">
-                <span className="pe-empty-space" style={{ height: '300px' }}></span>
-
-                <div className="text-wrapper">
-                  <h4 className="thin has-animation lines-up">
-                    We create world-class digital products, communications, and brands. Let's see
-                    what we can create for you:
-                  </h4>
-                </div>
-
-                <div className="c-accordion">
-                  <div className="accordion-list">
-                    <ul>
-                      <li className="accordion-title">
-                        Creative direction
-                        <p className="accordion-content ac-active">
-                          Our new office is located in a workshop in a paved courtyard typical of
-                          Belleville. This long building mixes several living and creative spaces on
-                          different levels: a large open space for shared work
-                        </p>
-                      </li>
-                      <li className="accordion-title">
-                        Brand Indentity
-                        <p className="accordion-content">
-                          Our new office is located in a workshop in a paved courtyard typical of
-                          Belleville. This long building mixes several living and creative spaces on
-                          different levels: a large open space for shared work
-                        </p>
-                      </li>
-                      <li className="accordion-title">
-                        UI/UX Design
-                        <p className="accordion-content">
-                          Our new office is located in a workshop in a paved courtyard typical of
-                          Belleville. This long building mixes several living and creative spaces on
-                          different levels: a large open space for shared work
-                        </p>
-                      </li>
-                      <li className="accordion-title">
-                        Video / Animation
-                        <p className="accordion-content">
-                          Our new office is located in a workshop in a paved courtyard typical of
-                          Belleville. This long building mixes several living and creative spaces on
-                          different levels: a large open space for shared work
-                        </p>
-                      </li>
-                      <li className="accordion-title">
-                        Creative direction
-                        <p className="accordion-content">
-                          Our new office is located in a workshop in a paved courtyard typical of
-                          Belleville. This long building mixes several living and creative spaces on
-                          different levels: a large open space for shared work
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section" data-background="#121212">
-            <div className="wrapper-small">
-              <div className="c-col-6 hide-mobile"></div>
-
-              <div className="c-col-6">
-                <div className="text-wrapper">
-                  <div style={{ color: '#ededed' }} className="caption has-animation skew-up">
-                    THE TARGET
-                  </div>
-                  <h1 style={{ color: '#ededed' }} className="big-title has-animation skew-up">
-                    Company Goals
-                  </h1>
-                </div>
-              </div>
-
-              <div className="c-col-8">
-                <div className="text-wrapper">
-                  <div style={{ color: '#ededed' }} className="caption has-animation skew-up">
-                    OUR MISSION
-                  </div>
-                  <h4 style={{ color: '#ededed' }} className="thin has-animation lines-up">
-                    Onward and upward, productize the deliverables and focus on the bottom line this
-                    is meaningless core competencies, or a loss a day will keep you focus but enough
-                    to wash your face but that's mint, well done. Not the long pole in my tent
-                    synergestic actionablesç
-                  </h4>
-                </div>
-              </div>
-            </div>
-
-            <div className="wrapper-full">
-              <div className="c-col-12 no-gap">
-                <div className="image-wrapper send-back">
-                  <img src="images/ab-img.png" alt="Single Image" />
-                </div>
-              </div>
-            </div>
-
-            <div className="wrapper-small">
-              <div className="c-col-8">
-                <div className="text-wrapper">
-                  <div style={{ color: '#ededed' }} className="caption has-animation skew-up">
-                    OUR VISION
-                  </div>
-                  <h3 style={{ color: '#ededed' }} className="thin has-animation lines-up">
-                    Eat our own dog food run it up the flagpole, ping the boss and circle back
-                    throughput for execute , yet mobile friendly. Win-win-win blue money draw a line
-                    in the sand, for going forward, pivot.
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section">
-            <div className="wrapper-small">
-              <div className="c-col-12">
-                <div className="text-wrapper align-center">
-                  <div className="caption">OUR TEAM</div>
-                  <h1 className="big-title">
-                    Good people,
-                    <br /> big projects.
-                  </h1>
-                </div>
-              </div>
-            </div>
-
-            <div className="wrapper-full">
-              <div className="c-col-3 no-gap">
-                <span className="pe-empty-space" style={{ height: '120px' }}></span>
-
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/5.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Blossom Pugh</div>
-
-                    <span className="team-member-pos">Co-Founder</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#053eff' }} target="_blank" href="http://behance.net">
-                        <i className="icon-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#ea4c89' }} target="_blank" href="#">
-                        <i className="icon-dribbble"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#08a0e9' }} target="_blank" href="#">
-                        <i className="icon-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#3b5998' }} target="_blank" href="#">
-                        <i className="icon-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#0e76a8' }} target="_blank" href="#">
-                        <i className="icon-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/6.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Hafsa Shannon</div>
-
-                    <span className="team-member-pos">Art Director</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#08a0e9' }} target="_blank" href="#">
-                        <i className="icon-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#3b5998' }} target="_blank" href="#">
-                        <i className="icon-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#0e76a8' }} target="_blank" href="#">
-                        <i className="icon-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="c-col-3 no-gap">
-                <span className="pe-empty-space" style={{ height: '75px' }}></span>
-
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/7.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Kean Devine</div>
-
-                    <span className="team-member-pos">UX Designer</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#053eff' }} target="_blank" href="http://behance.net">
-                        <i className="icon-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#ea4c89' }} target="_blank" href="#">
-                        <i className="icon-dribbble"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#3b5998' }} target="_blank" href="#">
-                        <i className="icon-facebook"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/9.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Valentino Woodard</div>
-
-                    <span className="team-member-pos">UI Designer</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#08a0e9' }} target="_blank" href="#">
-                        <i className="icon-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#0e76a8' }} target="_blank" href="#">
-                        <i className="icon-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="c-col-3 no-gap">
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/1.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Manveer Pratt</div>
-
-                    <span className="team-member-pos">Creative Director</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#053eff' }} target="_blank" href="http://behance.net">
-                        <i className="icon-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#ea4c89' }} target="_blank" href="#">
-                        <i className="icon-dribbble"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#0e76a8' }} target="_blank" href="#">
-                        <i className="icon-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/10.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Donovan Ingram</div>
-
-                    <span className="team-member-pos">Back-end Developer</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#053eff' }} target="_blank" href="http://behance.net">
-                        <i className="icon-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#08a0e9' }} target="_blank" href="#">
-                        <i className="icon-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#0e76a8' }} target="_blank" href="#">
-                        <i className="icon-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="c-col-3 no-gap">
-                <span className="pe-empty-space" style={{ height: '120px' }}></span>
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/3.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Romario Turnbull</div>
-
-                    <span className="team-member-pos">Front-end Developer</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#053eff' }} target="_blank" href="http://behance.net">
-                        <i className="icon-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#ea4c89' }} target="_blank" href="#">
-                        <i className="icon-dribbble"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#0e76a8' }} target="_blank" href="#">
-                        <i className="icon-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="team-member">
-                  <div className="team-member-image">
-                    <img src="images/team/4.png" alt="Team Member Image" />
-                  </div>
-
-                  <div className="team-member-details">
-                    <div className="team-member-name">Macie Day</div>
-
-                    <span className="team-member-pos">Head Officer</span>
-                  </div>
-
-                  <ul className="member-socials">
-                    <li>
-                      <a style={{ color: '#053eff' }} target="_blank" href="http://behance.net">
-                        <i className="icon-behance"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#ea4c89' }} target="_blank" href="#">
-                        <i className="icon-dribbble"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a style={{ color: '#08a0e9' }} target="_blank" href="#">
-                        <i className="icon-twitter"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="section">
-            <div className="wrapper-small">
-              <div className="c-col-12 align-center">
-                <div className="caption has-animation skew-up">WHAT WE DID BEFORE</div>
-                <h1 data-delay="0.2" className="big-title has-animation skew-up">
-                  <a href="works.html" className="underline">
-                    Works
-                  </a>
+      <div id="page-content" class="page-content">
+        <div className="section">
+          <div className="wrapper-small">
+            <div className="c-col-12">
+              <div className="text-wrapper">
+                <h1 className="big-title has-animation skew-up is-inview" data-scroll="true">
+                  Hello!
+                  <br />
+                  I am 
+                  Meher.
                 </h1>
               </div>
             </div>
+            <div className="c-col-4 hide-mobile"></div>
+            <div className="c-col-8">
+              <div className="text-wrapper">
+                <p
+                  data-delay="0.4"
+                  className="big-p has-animation lines-up is-inview"
+                  data-scroll="true"
+                  style={gs('transition-delay: 0.4s;')}
+                >
+                  <div style={gs('line-index:0;')}>
+                    <span className="split-line" style={gs('transition-delay: 0.4s;')}>
+                      This vendor is incompetent product launch yet waste of
+                    </span>
+                  </div>
+                  <div style={gs('line-index:1;')}>
+                    <span className="split-line" style={gs('transition-delay: 0.533333s;')}>
+                      resources message the initiative diversify kpis high touch client.
+                    </span>
+                  </div>
+                  <div style={gs('line-index:2;')}>
+                    <span className="split-line" style={gs('transition-delay: 0.666667s;')}>
+                      Herding cats commitment to the cause yet i also believe it's
+                    </span>
+                  </div>
+                  <div style={gs('line-index:3;')}>
+                    <span className="split-line" style={gs('transition-delay: 0.8s;')}>
+                      important for every member to be involved and invested in our
+                    </span>
+                  </div>
+                  <div style={gs('line-index:4;')}>
+                    <span className="split-line" style={gs('transition-delay: 0.933333s;')}>
+                      company..
+                    </span>
+                  </div>
+                </p>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
 
-        <footer className="site-footer">
-          <div className="wrapper">
-            <div className="c-col-12">
-              <h1 className="thin" style={{ margin: 0 }}>
-                Do you have a project or an idea?
-                <br />
-                <a className="underline" href="#">
-                  hello@pethemes.com
-                </a>
-              </h1>
-            </div>
-          </div>
-
-          <div style={{ marginBottom: '75px' }} className="wrapper-full">
-            <div className="c-col-6 hide-mobile"></div>
-
-            <div className="c-col-3 no-gap">
-              <div className="caption">VISIT</div>
-              <h5>
-                32 Avenue of the Americas
-                <br />
-                New York, NY 10013
-                <br />
-                United States
-              </h5>
-            </div>
-
-            <div className="c-col-3 no-gap">
-              <div className="caption">FOLLOW</div>
-
-              <ul className="footer-list">
-                <li>
-                  <a href="#" className="underline">
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="underline">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="underline">
-                    Behance
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="underline">
-                    Instagram
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div style={{ marginBottom: '0' }} className="wrapper">
-            <div className="c-col-6">
-              <ul className="footer-menu ">
-                <li>
-                  <a href="#">Terms</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#">Purchase</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="c-col-6 align-right">
-              <p className="copyright-text">Pe Themes - CYGNI®, inc 20 - 20©</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   )
